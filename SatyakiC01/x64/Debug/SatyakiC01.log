@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\new-learning-code\C programmes\C-programmes-\SatyakiC01\Source.cpp(22,16): warning C4305: 'initializing': truncation from 'double' to 'float'
+  SatyakiC01.vcxproj -> D:\new-learning-code\C programmes\C-programmes-\x64\Debug\SatyakiC01.exe
