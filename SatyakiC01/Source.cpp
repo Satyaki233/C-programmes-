@@ -1,47 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void sayHi(const char name[], int age);
-
+int findMax(int num1, int num2);
 
 int main() {
-	/* Array and Loops */
-
-	int age[5] = { 20 ,21,22,23,24 };
-	int i = 0;
-	int j = 0;
-	char friends[5][10] = {
-		"Rahul",
-		"Snehal",
-		"Sneho",
-		"Dip",
-		"Ayan"
-	};
-	
-	while (i <= 4) {
-		sayHi(friends[i], age[i]);
-		i++;
-	}
-
-	printf("Again \n");
-
-	for (j = 0; j <= 4; j++) {
-		sayHi(friends[j], age[j]);
-	}
-	
-	
+	int num1, num2;
+	int max;
+	printf("Hello \n");
+	printf("Enter the first number : ");
+	scanf_s("%d", &num1);
+	printf("Enter number two : ");
+	scanf_s("%d", &num2);
+	max = findMax(num1, num2);
+	printf("max number is = %d ", max);
 	return 0;
-
 }
 
-
-/*Fuctions 
- 
-
-
-*/
-void sayHi(const char name[] , int age){
-	printf("Hello everyone \n");
-	printf("My name is %s \n my age is  %d \n", name,age);
+int findMax(int num1, int num2) {
+	int result;
+	if (num1 > num2) {
+		result = num1;
+	}
+	else {
+		result = num2;
+	}
+	return result;
 }
-	
