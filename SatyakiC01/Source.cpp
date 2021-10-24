@@ -1,47 +1,47 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+void sayHi(const char name[], int age);
+
 
 int main() {
+	/* Array and Loops */
 
-	char name[] = "Satyaki De Sarkar";
-	int age = 21;
-	printf("%s is the best and he is only %d \n", name,age);
-
-	/*Data Types
-	  Char , Char[] , int , double , float;
-	  char = 'singel charecter';
-	  int = 'number';
-	  double = 'decimal number' -> ex. 1023.1335 ;
-	  
-
+	int age[5] = { 20 ,21,22,23,24 };
+	int i = 0;
+	int j = 0;
+	char friends[5][10] = {
+		"Rahul",
+		"Snehal",
+		"Sneho",
+		"Dip",
+		"Ayan"
+	};
 	
-	*/
+	while (i <= 4) {
+		sayHi(friends[i], age[i]);
+		i++;
+	}
 
-	int a = 20;
-	char b[] = "This is awesome";
-	float x = 5.21;
-	double dlb= 126530.23565;
-	char i = 'j';
+	printf("Again \n");
 
-
-	printf("%d , %s , %f , %lf , %c \n \n", a, b, x, dlb , i );
-
-	/*User input*/
-	/*int number;
-	printf("Enter a number =");
-	scanf_s("%d",&number );
-	printf("your nnumber is %d \n", number);
-    */
-	/*fgets for name*/
-
-	char teacher[20];
-	printf("Enter the name of teacher: ");
-	fgets(teacher, 20, stdin);
-	printf("The name of the teacher is = %s", teacher);
-
-
-
+	for (j = 0; j <= 4; j++) {
+		sayHi(friends[j], age[j]);
+	}
 	
 	
 	return 0;
+
 }
+
+
+/*Fuctions 
+ 
+
+
+*/
+void sayHi(const char name[] , int age){
+	printf("Hello everyone \n");
+	printf("My name is %s \n my age is  %d \n", name,age);
+}
+	
